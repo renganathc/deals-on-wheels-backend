@@ -4,7 +4,15 @@ import express from 'express';
 const router = express.Router();
 
 router.get("/", async (req, res) => {
-    const query = req.query;
+    const {minPrice, maxPrice, ...remaining} = req.query;
+    const query = {...remaining};
+    query.price = {};
+    minPrice != undefined ? query.price.$gte = Number(minPrice) : null;
+    maxPrice != undefined ? query.price.$lte = Number(maxPrice) : null;
+    if (Object.keys(query.price).length === 0) {
+        delete query.price;
+    }
+
     const result = await Car.find(query);
     res.status(201).json({data : result});
 });

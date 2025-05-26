@@ -1,4 +1,4 @@
-import Visit from "../models/visit.model";
+import Visit from "../models/visit.model.js";
 import express from "express";
 
 const router = express.Router();

@@ -6,4 +6,6 @@ const router = express.Router();
 router.get("/", async (req, res) => {
     const query = req.query;
     await Visit.create(query);
-})
+});
+
+export default router;

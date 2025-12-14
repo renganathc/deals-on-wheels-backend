@@ -1,4 +1,4 @@
-# 🔌 Deals On Wheels — Backend API Documentation
+# Deals On Wheels — Backend API Documentation
 
 This document describes the backend API for **Deals On Wheels**.
 The API is responsible for storing and querying used car listings. The API was built using **Node.js + Express** and is
@@ -140,16 +140,18 @@ GET /api/cars?brand=Skoda&minPrice=3.5&maxPrice=8&startYear=2018
 
 ---
 
-## 📝 Notes
-
-- All filters are applied server-side using MongoDB queries.
-- Numeric fields support decimal values (e.g. `4.22`).
-- The API is currently open as part of MVP scope.
-- Designed for consumption by the frontend and testing via Postman.
-
 ## API Preview (Postman)
 
 - POST endpoint used to add cars to DB
   <p align="center"><img src="screenshots/post_query.png" width="80%" /></p>
 - GET endpoint used to fetch cars from DB
   <p align="center"><img src="screenshots/get_query.png" width="80%" /></p>
+
+---
+
+## 📝 Notes
+
+- All filters are applied server-side using MongoDB queries.
+- Numeric fields support decimal values (e.g. `4.22`).
+- The API is currently open as part of MVP scope.
+- Designed for consumption by the frontend and testing via Postman.

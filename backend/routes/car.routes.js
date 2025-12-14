@@ -37,7 +37,12 @@ router.post("/", async (req, res) => {
             model: data.model,
             year: data.year,
             variant: data.variant,
-            image: data.image
+            image: data.image,
+            km: data.km,
+            fuel: data.fuel,
+            transmission: data.transmission,
+            ownerCount: data.ownerCount,
+            price: data.price,    
         });
         res.status(201).json({success : true, new_car: result});
     }

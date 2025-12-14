@@ -21,6 +21,26 @@ const carSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    km: {
+        type: Number,
+        required: true
+    },
+    fuel: {
+        type: String,
+        required: true
+    },
+    transmission: {
+        type: String,
+        required: true
+    },
+    ownerCount: {
+        type: String,
+        required: true
+    },
+    price: {
+        type: Number,
+        required: true
+    },
 },{ timestamps: true });
 
 
